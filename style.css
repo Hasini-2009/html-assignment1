@@ -103,15 +103,9 @@ nav a:hover {
 
 .home-side {
     width: 300px;
-    height: 300px;
+    padding: 45px 30px;
     background-color: #b1b4c8;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle {
+    border-radius: 15px;
     text-align: center;
 }
 
@@ -121,9 +115,9 @@ nav a:hover {
 }
 
 .circle p {
-    font-size: 11px;
-    letter-spacing: 2px;
     color: #41386b;
+    letter-spacing: 2px;
+    font-size: 12px;
 }
 
 
@@ -159,8 +153,16 @@ nav a:hover {
 
 .about-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 30px;
+}
+
+.education-box {
+    order: 1;
+}
+
+.about-box {
+    order: 2;
 }
 
 .about-box,
@@ -212,15 +214,22 @@ nav a:hover {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
 
 .skill-card {
-    background-color: #b1b4c8;
     padding: 30px;
     border-radius: 10px;
-    border-bottom: 5px solid #b0c49c;
+    border-bottom: 5px solid #7a70ba;
+}
+
+.skill-card:nth-child(odd) {
+    background-color: #b1b4c8;
+}
+
+.skill-card:nth-child(even) {
+    background-color: #b0c49c;
 }
 
 .skill-card h2 {
@@ -240,7 +249,7 @@ nav a:hover {
 }
 
 .skill-card:hover {
-    background-color: #b0c49c;
+    background-color: #b1b4c8;
 }
 
 
@@ -252,8 +261,9 @@ nav a:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 25px;
+    align-items: center;
 }
 
 .project-card {
@@ -261,6 +271,15 @@ nav a:hover {
     padding: 40px;
     border-radius: 10px;
     border-left: 5px solid #7a70ba;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-card:nth-child(2) {
+    margin-top: 50px;
+    background-color: #b0c49c;
 }
 
 .project-number {
@@ -283,7 +302,7 @@ nav a:hover {
 }
 
 .project-card .status {
-    color: #647d52;
+    color: #41386b;
     font-size: 13px;
 }
 
@@ -306,19 +325,22 @@ nav a:hover {
 
 .learning-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .learning-card {
     background-color: #b0c49c;
     padding: 30px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .learning-card h2 {
     color: #41386b;
-    margin-bottom: 15px;
+    min-width: 180px;
 }
 
 .learning-card p {
